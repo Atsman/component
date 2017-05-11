@@ -1,0 +1,33 @@
+{
+  "name": "component",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Atsman/component",
+  "author": "Aleh Atsman <aleh.atsman@gmail.com>",
+  "license": "MIT",
+  "main": "./src/index.js",
+  "scripts": {
+    "build": "webpack",
+    "test": "karma start"
+  },
+  "devDependencies": {
+    "babel-eslint": "^7.2.3",
+    "babel-loader": "^7.0.0",
+    "babel-preset-env": "^1.4.0",
+    "chai": "^3.5.0",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb-base": "^11.1.3",
+    "eslint-loader": "^1.7.1",
+    "eslint-plugin-import": "^2.2.0",
+    "karma": "^1.7.0",
+    "karma-chrome-launcher": "^2.1.1",
+    "karma-mocha": "^1.3.0",
+    "karma-webpack": "^2.0.3",
+    "mocha": "^3.3.0",
+    "prepack-webpack-plugin": "^1.1.0",
+    "webpack": "^2.5.1"
+  },
+  "dependencies": {
+    "lodash": "^4.17.4"
+  }
+}
