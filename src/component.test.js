@@ -1,25 +1,22 @@
 import { expect } from 'chai';
-import { Component } from './component';
+import createComponent from './component';
 
-class TestComponent extends Component {
-}
+const TestComponent = createComponent({});
 
-class TestComponentWithEvents extends Component {
-  getEvents() {
-    return {
-      'submit .form': 'onSubmit',
-    };
-  }
+const TestComponentWithEvents = createComponent({
+  events: {
+    'submit .form': 'onSubmit',
+  },
 
   initialize(options) {
     this.onSubmitCb = options.onSubmitCb;
     this.render();
-  }
+  },
 
   onSubmit(e) {
     e.preventDefault();
     this.onSubmitCb(e);
-  }
+  },
 
   render() {
     this.el.innerHTML = `
@@ -28,20 +25,20 @@ class TestComponentWithEvents extends Component {
         <button class="form__submit" type="submit">Submit</button>
       </form>
     `;
-  }
-}
+  },
+});
 
-class TestComponentWithRender extends Component {
+const TestComponentWithRender = createComponent({
   initialize() {
     this.render();
-  }
+  },
 
   render() {
     this.el.innerHTML = `
       <div class="test">Hello Test</div>
     `;
-  }
-}
+  },
+});
 
 describe('Component', () => {
   let testContainer;

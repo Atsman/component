@@ -1,11 +1,10 @@
 {
   "name": "component",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "./src/index.js",
   "repository": "https://github.com/Atsman/component",
   "author": "Aleh Atsman <aleh.atsman@gmail.com>",
   "license": "MIT",
-  "main": "./src/index.js",
   "scripts": {
     "build": "webpack",
     "test": "karma start"
@@ -13,6 +12,7 @@
   "devDependencies": {
     "babel-eslint": "^7.2.3",
     "babel-loader": "^7.0.0",
+    "babel-plugin-lodash": "^3.2.11",
     "babel-preset-env": "^1.4.0",
     "chai": "^3.5.0",
     "eslint": "^3.19.0",
@@ -28,6 +28,6 @@
     "webpack": "^2.5.1"
   },
   "dependencies": {
-    "lodash": "^4.17.4"
+    "lodash-es": "^4.17.4"
   }
 }
