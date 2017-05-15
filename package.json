@@ -1,6 +1,6 @@
 {
   "name": "component",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "main": "./src/index.js",
   "repository": "https://github.com/Atsman/component",
   "author": "Aleh Atsman <aleh.atsman@gmail.com>",
@@ -27,7 +27,5 @@
     "prepack-webpack-plugin": "^1.1.0",
     "webpack": "^2.5.1"
   },
-  "dependencies": {
-    "lodash-es": "^4.17.4"
-  }
+  "dependencies": {}
 }

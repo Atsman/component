@@ -1,4 +1,6 @@
-import { isString, isObject, map } from 'lodash-es';
+import util from './util';
+
+const { isString, isObject } = util;
 
 /**
  * Resolves el for component.
@@ -36,7 +38,8 @@ function resolveEl(el) {
  * @param {Object} eventBindingMap
  */
 function parseEventBindingMap(eventBindingMap) {
-  return map(eventBindingMap, (method, k) => {
+  return Object.keys(eventBindingMap).map((k) => {
+    const method = eventBindingMap[k];
     const [event, selector] = k.split(' ');
     return { event, selector, method };
   });
