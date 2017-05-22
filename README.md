@@ -6,6 +6,8 @@
 
 `yarn add component`
 
+Component requires babel processing!
+
 ## Example - form component
 
 ```javascript
